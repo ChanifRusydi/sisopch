@@ -1,1 +1,17 @@
 simple.c Tanggal 30 September 2021 : Tugas 1 Matkul Sistem Operasi
+obj-m += simple.o
+all:
+    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+ 
+clean:
+    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+Melihat modul yg sudah diload sebelumnya
+$ lsmod
+
+Load Kernel Module
+$ sudo insmod simple.ko
+Untuk memeriksa pesan/isi modul
+$dmesg atau $ sudo. dmesg -c
+
+Untuk menghapus modul kernel
+$ sudo rmmod simple
