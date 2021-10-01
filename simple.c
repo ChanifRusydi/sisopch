@@ -10,7 +10,7 @@ static void __exit simple_exit(void){
     printk(KERN_INFO "removing Module \n");
 }
 module_init(simple_init);
-modulE_exit(simple_exit);
+module_exit(simple_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Simple Module");
