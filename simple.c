@@ -2,11 +2,11 @@
 #include<linux/kernel.h>
 #include<linux/module.h>
 
-int simple_init(void){
+static int __init simple_init(void){
     printk(KERN_INFO "Loading  Module\n");
     return 0;
 }
-void simple_exit(void){
+static void __exit simple_exit(void){
     printk(KERN_INFO "removing Module \n");
 }
 module_init(simple_init);
