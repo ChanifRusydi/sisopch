@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <ctype.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -117,7 +118,7 @@ void interactive(){
       free(args[argc]);
       args[argc] = NULL;
       execute_command(args[0], args);
-      //if(!(argc > 0 && args[argc-1][0] == '&')) wait(); // Wait if & is appended to command
+      if(!(argc > 0 && args[argc-1][0] == '&')) wait(); // Wait if & is appended to command
       args[argc] = malloc(MAX_LINE * sizeof(char));
       args[argc][0] = '\0';
       commands_run = save_history(history, last, commands_run);
