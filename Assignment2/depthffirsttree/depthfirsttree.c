@@ -34,3 +34,7 @@ void tasks_lister_dfs_exit(void)
 
 module_init(tasks_lister_dfs_init);
 module_exit(tasks_lister_dfs_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Task Lister Depth First Tree");
+MODULE_AUTHOR("SGG");

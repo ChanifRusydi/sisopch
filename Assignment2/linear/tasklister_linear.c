@@ -26,3 +26,7 @@ void tasks_lister_linear_exit(void)
 
 module_init(tasks_lister_linear_init);
 module_exit(tasks_lister_linear_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Task Lister Linear");
+MODULE_AUTHOR("SGG");
