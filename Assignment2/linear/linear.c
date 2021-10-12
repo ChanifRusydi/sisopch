@@ -4,11 +4,11 @@
 #include <linux/sched.h>
 #include <linux/sched/signal.h>
 
+struct task_struct *task;
+
 int tasks_lister_linear_init(void)
 {
   printk(KERN_INFO "Loading module...\n");
-
-  struct task_struct *task;
 
   for_each_process(task)
   {
