@@ -1,9 +1,6 @@
 obj-m += tasklister_linear.o
-
-KERNELDIR ?= /lib/modules/$(shell uname -r)/build
-PWD := $(shell pwd)
-
 all:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD)
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
 clean:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
