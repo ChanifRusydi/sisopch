@@ -2,6 +2,7 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/sched.h>
+#include <linux/sched/task.h>
 
 void dfs(struct task_struct *task)
 {
