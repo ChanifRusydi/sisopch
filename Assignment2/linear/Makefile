@@ -1,5 +1,5 @@
-obj-m += linear.o
-linear-y := linear_main.o linear.ko
+obj-m += tasklister_linear.o
+
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
