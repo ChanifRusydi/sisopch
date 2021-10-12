@@ -2,7 +2,7 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/sched.h>
-
+#include <linux/sched/signal.h>
 
 int tasks_lister_linear_init(void)
 {
