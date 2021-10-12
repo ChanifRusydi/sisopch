@@ -3,7 +3,6 @@
 #include <linux/module.h>
 #include <linux/sched.h>
 #include <linux/sched/signal.h>
-#include <linux/proc_fs.h>
 
 struct task_struct *task;
 
